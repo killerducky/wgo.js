@@ -12,8 +12,10 @@ if [ ! -e "$TOPDIR/compiler/compiler.jar" ]; then
 
 	mkdir -p $TOPDIR/compiler
 	cd $TOPDIR/compiler
+	rm closure-compiler-v*.jar
 	wget http://dl.google.com/closure-compiler/compiler-latest.zip
 	unzip compiler-latest.zip
+	ln -s closure-compiler-v*.jar compiler.jar
 fi
 
 echo '-----------------------------'
